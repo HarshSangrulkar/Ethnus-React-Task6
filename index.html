@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Harsh Sangrulkar - Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="header">
+      <div class="container">
+        <nav>
+          <img src="images/l4.png" alt="" class="logo" />
+          <ul>
+            <li>
+              <a href="#header" onclick="scrollToSection('header')">Home</a>
+            </li>
+            <li>
+              <a href="#about" onclick="scrollToSection('about')">About</a>
+            </li>
+            <li>
+              <a href="#services" onclick="scrollToSection('services')"
+                >Services</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <div class="header-text">
+          <h1>Hi, I'm <span>Harsh</span> Sangrulkar</h1>
+        </div>
+      </div>
+    </div>
+    <div id="about">
+      <div class="container">
+        <div class="row">
+          <div class="about-col-1">
+            <img src="images/hh1.png" alt="" />
+          </div>
+          <div class="about-col-2">
+            <h1 class="sub-title">About Me</h1>
+            <p>
+              I'm currently a passionate B.Tech student majoring in Computer
+              Science at Vellore Institute of Technology. My academic journey
+              revolves around exploring the intricate world of technology.
+              Proficient in MERN stack development, I find joy in crafting
+              robust and dynamic web applications. Additionally, my fascination
+              with machine learning fuels my desire to unravel patterns in data
+              and create intelligent solutions. With a keen eye for innovation,
+              I'm dedicated to pushing the boundaries of what's possible in the
+              realm of technology. Eager to contribute to cutting-edge projects
+              and always ready for the next coding challenge, I thrive on the
+              thrill of turning ideas into reality.
+            </p>
+            <div class="tab-titles">
+              <p class="tab-links active-link" onclick="opentab('skills')">
+                Skils
+              </p>
+              <p class="tab-links" onclick="opentab('experience')">
+                Certification Courses
+              </p>
+              <p class="tab-links" onclick="opentab('education')">Education</p>
+            </div>
+            <div class="tab-contents active-tab" id="skills">
+              <ul>
+                <li>
+                  <span>Data Science</span><br />Machine Learning and Deep
+                  Learning
+                </li>
+                <li>
+                  <span>Web Development</span><br />MERN Stack Development
+                </li>
+                <li>
+                  <span>Data Structures and Algorithms</span><br />C++ | Java |
+                  Python
+                </li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="experience">
+              <ul>
+                <li><span>MERN Stack Developemt</span><br />Ethnus</li>
+                <li>
+                  <span>Machine Learning-Deep Learning</span><br />Smart Internz
+                </li>
+                <li><span>Machine Learning</span><br />Internshala</li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="education">
+              <ul>
+                <li>
+                  <span>B-Tech</span><br />Vellore Institute of Technology
+                </li>
+                <li><span>XII</span><br />Bangalore International Academy</li>
+                <li><span>X</span><br />Euro School</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="services">
+      <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list"></div>
+        <div>
+          <h2>Web Development</h2>
+          <p>
+            I am a skilled MERN stack developer with a solid foundation in
+            building robust web applications. I honed my expertise through
+            dedicated learning and recently completed a certification course
+            from Ethnus, further refining my proficiency. My passion for
+            creating seamless user experiences drives my commitment to
+            excellence, and I take pride in my ability to navigate the
+            complexities of the MERN stack effortlessly. With a keen eye for
+            detail and a commitment to staying at the forefront of technological
+            advancements, I am confident in my ability to bring innovative
+            solutions to any project.
+          </p>
+        </div>
+        <br />
+
+        <div>
+          <h2>Machine Learning</h2>
+          <p>
+            I am a proficient machine learning enthusiast, having acquired
+            extensive knowledge through practical experience and formal
+            training. I recently completed certification courses from
+            SmartInternz and Internshala, solidifying my expertise in this
+            dynamic field. My commitment to staying abreast of the latest
+            developments in machine learning ensures that I bring a cutting-edge
+            approach to every project. I am particularly adept at translating
+            complex algorithms into actionable insights, and my passion for
+            leveraging data to drive informed decision-making underscores my
+            proficiency in machine learning.
+          </p>
+        </div>
+        <br />
+        <div>
+          <h2>CS Fundamentals</h2>
+          <p>
+            I possess a strong foundation in computer fundamentals, with a focus
+            on database management systems (DBMS), computer networks, and
+            operating systems. My academic journey at college has equipped me
+            with in-depth knowledge in these key areas, and I consistently
+            demonstrate a high level of proficiency. Whether designing efficient
+            databases, optimizing computer networks, or ensuring the seamless
+            functionality of operating systems, my skills extend across the
+            spectrum of computer fundamentals. My commitment to excellence in
+            these core areas reflects my dedication to mastering the
+            foundational principles that underpin effective computing.
+          </p>
+        </div>
+      </div>
+    </div>
+    <script>
+      var tablinks = document.getElementsByClassName("tab-links");
+      var tabcontents = document.getElementsByClassName("tab-contents");
+
+      function opentab(tabname) {
+        for (tablink of tablinks) {
+          tablink.classList.remove("active-link");
+        }
+        for (tabcontent of tabcontents) {
+          tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+      }
+    </script>
+  </body>
+</html>
